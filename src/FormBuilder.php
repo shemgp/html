@@ -825,6 +825,11 @@ class FormBuilder
           return $checked;
       }
 
+      if ($value == 't')
+          $value = true;
+      if ($value == 'f')
+          $value = false;
+
       return $this->getValueAttribute($name) == $value;
   }
 
